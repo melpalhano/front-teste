@@ -1,8 +1,8 @@
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FC } from "react";
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FC } from 'react';
 
-import { CustomSizesProps, IconProps } from "./types";
+import { CustomSizesProps, IconProps } from './types';
 
 export const TrashIcon: FC<IconProps> = (props) => {
   const { customSize, ...rest } = props;
@@ -18,7 +18,7 @@ export const TrashIcon: FC<IconProps> = (props) => {
       {...rest}
       {...customSizes}
       icon={faTrash}
-      id="trash-icon"
+      id='trash-icon'
     />
   );
 };

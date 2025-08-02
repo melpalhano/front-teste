@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
-
 import { Container } from '@components/core/container';
 import { DefenseLogo } from '@components/logos/defense';
+import React, { FC } from 'react';
+
 import * as styles from './styles/sidebar-root.css';
 import { SidebarRootProps } from './types';
 
@@ -14,7 +14,7 @@ export const SidebarRoot: FC<SidebarRootProps> = (props) => {
         <DefenseLogo className={styles.sideBarDefenseLogoStyle} />
         <DefenseLogo
           className={styles.sideBarDefenseLogoSmallStyle}
-          size="small"
+          size='small'
         />
 
         <p className={styles.sideBarTitleHeaderStyle}>Middlewares e Centrais</p>

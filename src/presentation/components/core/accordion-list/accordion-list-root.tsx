@@ -1,6 +1,6 @@
-import { FC } from 'react';
 import { Root as PrimitiveRoot } from '@radix-ui/react-accordion';
 import classNames from 'classnames';
+import { FC } from 'react';
 
 import { accordionListRootStyle } from './styles/accordion-list-root.css';
 import { AccordionListRootProps } from './types';

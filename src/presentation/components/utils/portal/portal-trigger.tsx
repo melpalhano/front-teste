@@ -1,7 +1,7 @@
 'use client';
 
-import { FC, useCallback } from 'react';
 import { Slot } from '@radix-ui/react-slot';
+import { FC, useCallback } from 'react';
 
 import { usePortal } from './contexts/portal-context';
 import { PortalTriggerProps } from './types';

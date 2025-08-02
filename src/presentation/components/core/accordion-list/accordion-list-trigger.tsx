@@ -1,8 +1,8 @@
-import { FC } from 'react';
+import { CaretRightIcon } from '@components/icons/caret-right';
 import { Trigger as PrimitiveTrigger } from '@radix-ui/react-accordion';
 import classNames from 'classnames';
+import { FC } from 'react';
 
-import { CaretRightIcon } from '@components/icons/caret-right';
 import * as styles from './styles/accordion-list-trigger.css';
 import { AccordionListTriggerProps } from './types';
 
@@ -14,7 +14,7 @@ export const AccordionListTrigger: FC<AccordionListTriggerProps> = (props) => {
     <PrimitiveTrigger {...rest} className={classes}>
       <div className={styles.accordionListTriggerContentStyle}>
         <CaretRightIcon
-          customSize="1.8rem"
+          customSize='1.8rem'
           className={styles.accordionListTriggerIconStyle}
         />
         <div className={styles.accordionListTriggerLabelStyle}>{children}</div>

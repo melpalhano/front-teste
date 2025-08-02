@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import classNames from 'classnames';
 import { Slot } from '@radix-ui/react-slot';
+import classNames from 'classnames';
+import { FC } from 'react';
 
 import { highlightTextStyle } from './styles/highlight-text.css';
 import { HighlightTextProps } from './types';

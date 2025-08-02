@@ -1,4 +1,4 @@
-import { style, CSSProperties } from '@vanilla-extract/css';
+import { CSSProperties, style } from '@vanilla-extract/css';
 
 import { theme } from '../../../styles/theme/theme.css';
 import {

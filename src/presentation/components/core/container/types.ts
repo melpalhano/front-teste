@@ -1,5 +1,5 @@
-import { HTMLAttributes } from 'react';
 import { RecipeVariants } from '@vanilla-extract/recipes';
+import { HTMLAttributes } from 'react';
 
 import * as constants from './constants';
 import { containerRecipe } from './styles/container-recipe.css';

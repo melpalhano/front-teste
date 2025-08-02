@@ -1,8 +1,8 @@
-import { HTMLAttributes } from 'react';
 import { RecipeVariants } from '@vanilla-extract/recipes';
+import { HTMLAttributes } from 'react';
 
-import { highlightRootRecipe } from './styles/highlight-root-recipe.css';
 import * as constants from './constants';
+import { highlightRootRecipe } from './styles/highlight-root-recipe.css';
 
 export type HighlightTemplateStatus =
   (typeof constants.HIGHLIGHT_STATUS)[number];

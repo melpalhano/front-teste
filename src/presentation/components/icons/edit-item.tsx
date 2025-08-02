@@ -1,8 +1,8 @@
-import { FC } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPen } from "@fortawesome/free-solid-svg-icons";
+import { faPen } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FC } from 'react';
 
-import { CustomSizesProps, IconProps } from "./types";
+import { CustomSizesProps, IconProps } from './types';
 
 export const EditIcon: FC<IconProps> = (props) => {
   const { customSize, ...rest } = props;

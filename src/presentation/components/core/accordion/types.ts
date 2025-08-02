@@ -1,8 +1,8 @@
-import { ButtonHTMLAttributes, HTMLAttributes } from 'react';
 import { RecipeVariants } from '@vanilla-extract/recipes';
+import { ButtonHTMLAttributes, HTMLAttributes } from 'react';
 
-import { accordionTriggerFlagRecipe } from './styles/accordion-trigger-flag-recipe.css';
 import { accordionContentRecipe } from './styles/accordion-content-recipe.css';
+import { accordionTriggerFlagRecipe } from './styles/accordion-trigger-flag-recipe.css';
 
 export type AccordionTriggerFlagVariants = RecipeVariants<
   typeof accordionTriggerFlagRecipe

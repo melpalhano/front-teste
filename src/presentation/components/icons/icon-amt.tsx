@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 interface PropsCustomIcon {
   path: string;
@@ -7,5 +7,5 @@ interface PropsCustomIcon {
 }
 
 export const CustomIcon = ({ path, alt, height }: PropsCustomIcon) => {
-  return <Image src={path} alt={alt ?? "icon"} height={height} />;
+  return <Image src={path} alt={alt ?? 'icon'} height={height} />;
 };

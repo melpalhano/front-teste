@@ -1,11 +1,11 @@
 'use client';
 
-import { FC, useCallback } from 'react';
-import classNames from 'classnames';
 import { Slot } from '@radix-ui/react-slot';
+import classNames from 'classnames';
+import { FC, useCallback } from 'react';
 
-import { ToggleTriggerProps } from './types';
 import { toggleTriggerRecipe } from './styles/toggle-trigger-recipe.css';
+import { ToggleTriggerProps } from './types';
 
 export const ToggleTrigger: FC<ToggleTriggerProps> = (props) => {
   const { children, className, enabled, setEnabled, asChild, ...rest } = props;
@@ -23,7 +23,7 @@ export const ToggleTrigger: FC<ToggleTriggerProps> = (props) => {
   const Component = asChild ? Slot : 'button';
 
   return (
-    <Component {...rest} type="button" className={classes} onClick={toggle}>
+    <Component {...rest} type='button' className={classes} onClick={toggle}>
       {children}
     </Component>
   );

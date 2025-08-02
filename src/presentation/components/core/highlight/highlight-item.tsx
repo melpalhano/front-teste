@@ -1,8 +1,8 @@
-import { FC } from 'react';
 import classNames from 'classnames';
+import { FC } from 'react';
 
-import { HighlightItemProps } from './types';
 import { highlightItemStyle } from './styles/highlight-item.css';
+import { HighlightItemProps } from './types';
 
 export const HighlightItem: FC<HighlightItemProps> = (props) => {
   const { children, className, ...rest } = props;

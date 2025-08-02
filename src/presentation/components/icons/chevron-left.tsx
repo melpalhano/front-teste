@@ -1,8 +1,8 @@
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FC } from "react";
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FC } from 'react';
 
-import { CustomSizesProps, IconProps } from "./types";
+import { CustomSizesProps, IconProps } from './types';
 
 export const ChevronLeftIcon: FC<IconProps> = (props) => {
   const { customSize, ...rest } = props;

@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { FC } from "react";
+import { Accordion } from '@components/core/accordion';
+import { Highlight } from '@components/core/highlight';
+import { ChevronDownIcon } from '@components/icons/chevron-down';
+import Link from 'next/link';
+import { FC } from 'react';
 
-import { Accordion } from "@components/core/accordion";
-import { Highlight } from "@components/core/highlight";
-import { ChevronDownIcon } from "@components/icons/chevron-down";
-import { FragmentedSidebarMenu } from "./fragments";
-import * as styles from "./styles/sidebar-menu.css";
-import { SideBarMenuProps } from "./types";
+import { FragmentedSidebarMenu } from './fragments';
+import * as styles from './styles/sidebar-menu.css';
+import { SideBarMenuProps } from './types';
 
 export const SidebarMenu: FC<SideBarMenuProps> = (props) => {
   const { resources, ...rest } = props;
@@ -45,7 +45,7 @@ export const SidebarMenu: FC<SideBarMenuProps> = (props) => {
                   <Accordion.TriggerFlag
                     className={styles.sidebarTriggerFlagStyle}
                   >
-                    <ChevronDownIcon customSize="1.2rem" />
+                    <ChevronDownIcon customSize='1.2rem' />
                   </Accordion.TriggerFlag>
                 </Accordion.Trigger>
               </FragmentedSidebarMenu.Highlight>
@@ -76,21 +76,18 @@ export const SidebarMenu: FC<SideBarMenuProps> = (props) => {
             highlighted={false}
             key={id}
             path={path}
-            className={ styles.sidebarMenuItemLinkStyle }
+            className={styles.sidebarMenuItemLinkStyle}
           >
-            <Link
-              aria-disabled={true}
-              href={path}
-            >
+            <Link aria-disabled={true} href={path}>
               <Highlight.Item
                 className={styles.sidebarAccordionTriggerItemStyle}
               >
                 {item}
               </Highlight.Item>
 
-                <Highlight.Text className={styles.sidebarTextStyle}>
-                  {title}
-                </Highlight.Text>
+              <Highlight.Text className={styles.sidebarTextStyle}>
+                {title}
+              </Highlight.Text>
             </Link>
           </FragmentedSidebarMenu.Highlight>
         );

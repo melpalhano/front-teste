@@ -1,7 +1,6 @@
-import { globalStyle } from '@vanilla-extract/css';
-
 import { BREAKPOINTS } from '@components/styles/theme/breakpoints';
 import { theme } from '@components/styles/theme/theme.css';
+import { globalStyle } from '@vanilla-extract/css';
 
 globalStyle('*, *::before, *::after', {
   margin: 0,
@@ -37,5 +36,5 @@ globalStyle('body', {
   fontFamily: theme.fonts.primary,
   WebkitFontSmoothing: 'antialiased',
   backgroundColor: theme.colors.background,
-  color: theme.colors.primaryForeground
+  color: theme.colors.primaryForeground,
 });

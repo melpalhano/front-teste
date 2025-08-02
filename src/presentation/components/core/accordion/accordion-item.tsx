@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import { FC } from 'react';
 
 import { ItemProvider } from './contexts/item-context';
-import { AccordionItemProps } from './types';
 import { accordionItemStyle } from './styles/accordion-item.css';
+import { AccordionItemProps } from './types';
 
 export const AccordionItem: FC<AccordionItemProps> = (props) => {
   const { children, className, id, ...rest } = props;

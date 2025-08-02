@@ -1,5 +1,5 @@
-import { FC } from 'react';
 import classNames from 'classnames';
+import { FC } from 'react';
 
 import { headerLeftGroupStyle } from './styles/header-left-group.css';
 import { HeaderRootProps } from './types';

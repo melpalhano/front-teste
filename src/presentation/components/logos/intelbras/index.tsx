@@ -1,5 +1,5 @@
-import { FC } from 'react';
 import Image from 'next/image';
+import { FC } from 'react';
 
 import IntelbrasLogoSVG from '../../assets/logos/intelbras.svg';
 import { IntelbrasLogoProps } from './types';
@@ -12,11 +12,11 @@ export const IntelbrasLogo: FC<IntelbrasLogoProps> = (props) => {
       <Image
         className={className}
         src={IntelbrasLogoSVG}
-        alt="intelbras"
+        alt='intelbras'
         height={24}
       />
     );
   }
 
-  return <Image className={className} src={IntelbrasLogoSVG} alt="intelbras" />;
+  return <Image className={className} src={IntelbrasLogoSVG} alt='intelbras' />;
 };

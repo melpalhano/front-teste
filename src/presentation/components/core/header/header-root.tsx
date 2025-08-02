@@ -1,5 +1,5 @@
-import { FC } from 'react';
 import classNames from 'classnames';
+import { FC } from 'react';
 
 import { headerRootStyle } from './styles/header-root.css';
 import { HeaderRootProps } from './types';

@@ -1,11 +1,11 @@
 'use client';
 
-import { FC } from 'react';
 import classNames from 'classnames';
+import { FC } from 'react';
 
-import { AccordionRootProps } from './types';
 import { ActivedItemProvider } from './contexts/active-item-context';
 import { accordionRootStyle } from './styles/accordion-root.css';
+import { AccordionRootProps } from './types';
 
 export const AccordionRoot: FC<AccordionRootProps> = (props) => {
   const { children, className, ...rest } = props;

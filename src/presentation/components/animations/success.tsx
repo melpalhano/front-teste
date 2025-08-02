@@ -1,5 +1,5 @@
-import { FC } from 'react';
 import Lottie from 'lottie-react';
+import { FC } from 'react';
 
 import LottieSuccessAnimation from '../assets/animations/success.json';
 import { AnimationProps } from './types';

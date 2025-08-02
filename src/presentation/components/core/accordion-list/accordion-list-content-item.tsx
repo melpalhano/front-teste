@@ -1,5 +1,5 @@
-import { FC } from 'react';
 import classNames from 'classnames';
+import { FC } from 'react';
 
 import { accordionListContentItemStyle } from './styles/accordion-list-content-item.css';
 import { AccordionListContentProps } from './types';

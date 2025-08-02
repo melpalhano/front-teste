@@ -1,8 +1,8 @@
-import { createGlobalTheme } from "@vanilla-extract/css";
+import { createGlobalTheme } from '@vanilla-extract/css';
 
-import { COLOR_PALETTE } from "./color-palette";
+import { COLOR_PALETTE } from './color-palette';
 
-export const theme = createGlobalTheme(":root", {
+export const theme = createGlobalTheme(':root', {
   colors: {
     primarySurface: COLOR_PALETTE.neutral[850],
     secondarySurface: COLOR_PALETTE.neutral[900],
@@ -51,6 +51,6 @@ export const theme = createGlobalTheme(":root", {
     tableRowEven: COLOR_PALETTE.neutral[700],
   },
   fonts: {
-    primary: "var(--nunito-font), sans-serif",
+    primary: 'var(--nunito-font), sans-serif',
   },
 });

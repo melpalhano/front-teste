@@ -1,6 +1,6 @@
 'use client';
 
-import { FC, createContext, useContext, useState } from 'react';
+import { createContext, FC, useContext, useState } from 'react';
 
 import { ActivedItemContext, ActivedItemProviderProps } from './types';
 

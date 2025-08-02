@@ -1,13 +1,13 @@
-import { cardInfoStyle } from "./styles/card-info.css"
+import { cardInfoStyle } from './styles/card-info.css';
 
 interface PropsCardInfo {
-    text: string
+  text: string;
 }
 
-export const CardInfo = ({text}: PropsCardInfo) => {
-    return(
-        <div className={cardInfoStyle}>
-            <span>{text}</span>
-        </div>
-    )
-}
+export const CardInfo = ({ text }: PropsCardInfo) => {
+  return (
+    <div className={cardInfoStyle}>
+      <span>{text}</span>
+    </div>
+  );
+};

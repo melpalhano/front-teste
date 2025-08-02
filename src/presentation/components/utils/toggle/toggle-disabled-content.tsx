@@ -1,6 +1,6 @@
-import { FC } from 'react';
-import classNames from 'classnames';
 import { Slot } from '@radix-ui/react-slot';
+import classNames from 'classnames';
+import { FC } from 'react';
 
 import { toggleDisabledContentStyle } from './styles/toggle-content.css';
 import { ToggleContentProps } from './types';

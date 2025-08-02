@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
-import { ReactNode } from "react";
+import '@styles/global.css';
 
-import { fonts } from "@components/styles/fonts";
-import "@styles/global.css";
+import { fonts } from '@components/styles/fonts';
+import type { Metadata } from 'next';
+import { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-  title: "Defense IA | Middlewares e Centrais",
+  title: 'Defense IA | Middlewares e Centrais',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-br" className={fonts.nunito}>
+    <html lang='pt-br' className={fonts.nunito}>
       <body>{children}</body>
     </html>
   );

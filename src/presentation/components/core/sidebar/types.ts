@@ -1,6 +1,5 @@
-import { HTMLAttributes, ReactNode } from 'react';
-
 import { HighlightRootProps } from '@components/core/highlight/types';
+import { HTMLAttributes, ReactNode } from 'react';
 
 export type SidebarResourceGroup = {
   id: string;

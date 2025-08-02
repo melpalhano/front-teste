@@ -1,8 +1,8 @@
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FC } from "react";
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FC } from 'react';
 
-import { CustomSizesProps, IconProps } from "./types";
+import { CustomSizesProps, IconProps } from './types';
 
 export const SearchIcon: FC<IconProps> = (props) => {
   const { customSize, ...rest } = props;
@@ -18,7 +18,7 @@ export const SearchIcon: FC<IconProps> = (props) => {
       {...rest}
       {...customSizes}
       icon={faMagnifyingGlass}
-      id="button-search"
+      id='button-search'
     />
   );
 };

@@ -1,18 +1,18 @@
-"use client";
+'use client';
 
-import { usePathname } from "next/navigation";
-import { FC } from "react";
+import { Highlight } from '@components/core/highlight';
+import { usePathname } from 'next/navigation';
+import { FC } from 'react';
 
-import { Highlight } from "@components/core/highlight";
-import { SidebarMenuHighlightProps } from "../types";
+import { SidebarMenuHighlightProps } from '../types';
 
 export const SidebarMenuHighlight: FC<SidebarMenuHighlightProps> = (props) => {
   const { children, path, ...rest } = props;
   const currentPath = usePathname();
 
   const validateHighlight = () => {
-    if (path === "/") {
-      return currentPath === "/";
+    if (path === '/') {
+      return currentPath === '/';
     }
     return currentPath.startsWith(path);
   };

@@ -1,8 +1,7 @@
-import { style } from "@vanilla-extract/css";
-
+import { style } from '@vanilla-extract/css';
 
 export const containerPage = style({
-    marginTop: "20rem",
-    marginLeft: "5%",
-    height: "90vh",
+  marginTop: '20rem',
+  marginLeft: '5%',
+  height: '90vh',
 });

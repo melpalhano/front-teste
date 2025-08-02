@@ -1,9 +1,7 @@
 import { CSSProperties, style } from '@vanilla-extract/css';
 
 import { theme } from '../../../styles/theme/theme.css';
-import {
-  accordionListSuccessStyle,
-} from './accordion-list-item.css';
+import { accordionListSuccessStyle } from './accordion-list-item.css';
 
 export const accordionListActionStyleSucessStyle: CSSProperties = {
   color: theme.colors.success,

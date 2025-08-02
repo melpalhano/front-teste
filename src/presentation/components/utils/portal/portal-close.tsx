@@ -1,10 +1,10 @@
 'use client';
 
-import { FC } from 'react';
 import { Slot } from '@radix-ui/react-slot';
+import { FC } from 'react';
 
-import { Callback, PortalCloseProps } from './types';
 import { usePortal } from './contexts/portal-context';
+import { Callback, PortalCloseProps } from './types';
 
 export const PortalClose: FC<PortalCloseProps> = (props) => {
   const { children, asChild, onClick, ...rest } = props;

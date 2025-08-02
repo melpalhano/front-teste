@@ -1,10 +1,10 @@
 import { AccordionContent } from './accordion-content';
-import { AccordionTriggerFlag } from './accordion-trigger-flag';
-import { AccordionTriggerItem } from './accordion-trigger-item';
-import { AccordionTrigger } from './accordion-trigger';
+import { AccordionItem } from './accordion-item';
 import { AccordionRoot } from './accordion-root';
 import { AccordionText } from './accordion-text';
-import { AccordionItem } from './accordion-item';
+import { AccordionTrigger } from './accordion-trigger';
+import { AccordionTriggerFlag } from './accordion-trigger-flag';
+import { AccordionTriggerItem } from './accordion-trigger-item';
 
 export const Accordion = {
   Root: AccordionRoot,

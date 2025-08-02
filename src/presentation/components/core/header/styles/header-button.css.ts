@@ -1,5 +1,6 @@
-import { theme } from '../../../styles/theme/theme.css';
 import { style } from '@vanilla-extract/css';
+
+import { theme } from '../../../styles/theme/theme.css';
 
 export const headerButtonStyle = style({
   width: '2.6rem',

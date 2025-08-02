@@ -1,10 +1,10 @@
-import { RecipeVariants } from '@vanilla-extract/recipes';
 import {
-  ScrollAreaProps,
-  ScrollAreaViewportProps as PrimitiveScrollAreaViewportProps,
-  ScrollAreaScrollbarProps as PrimitiveScrollAreaScrollbarProps,
   ScrollAreaCornerProps as PrimitiveScrollAreaCornerProps,
+  ScrollAreaProps,
+  ScrollAreaScrollbarProps as PrimitiveScrollAreaScrollbarProps,
+  ScrollAreaViewportProps as PrimitiveScrollAreaViewportProps,
 } from '@radix-ui/react-scroll-area';
+import { RecipeVariants } from '@vanilla-extract/recipes';
 
 import { SCROLL_AREA_SCROLLBAR_SIZES } from './constants';
 import { scrollAreaScrollbarRecipe } from './styles/scroll-area-scrollbar-recipe.css';

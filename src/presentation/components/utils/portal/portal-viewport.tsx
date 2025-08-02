@@ -1,8 +1,8 @@
 'use client';
 
-import { FC, useEffect, useRef } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import classNames from 'classnames';
+import { FC, useEffect, useRef } from 'react';
 
 import { When } from '../when';
 import { usePortal } from './contexts/portal-context';
@@ -23,8 +23,8 @@ export const PortalViewport: FC<PortalViewportProps> = (props) => {
         portalRef.current &&
         !portalRef.current.contains(event.target) &&
         !event.target.closest('[data-portal-container]') &&
-        event.target.tagName !== "INPUT" &&
-        event.target.tagName !== "svg" 
+        event.target.tagName !== 'INPUT' &&
+        event.target.tagName !== 'svg'
       ) {
         setOpened(false);
       }

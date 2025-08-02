@@ -1,9 +1,9 @@
-import { FC } from 'react';
-import classNames from 'classnames';
 import { Slot } from '@radix-ui/react-slot';
+import classNames from 'classnames';
+import { FC } from 'react';
 
-import { HighlightRootProps } from './types';
 import { highlightRootRecipe } from './styles/highlight-root-recipe.css';
+import { HighlightRootProps } from './types';
 
 export const HighlightRoot: FC<HighlightRootProps> = (props) => {
   const { children, className, highlighted, status, asChild, ...rest } = props;

@@ -1,6 +1,6 @@
-import { FC } from 'react';
 import { Header as PrimitiveHeader } from '@radix-ui/react-accordion';
 import classNames from 'classnames';
+import { FC } from 'react';
 
 import { accordionListHeaderStyle } from './styles/accordion-list-header.css';
 import { AccordionListHeaderProps } from './types';

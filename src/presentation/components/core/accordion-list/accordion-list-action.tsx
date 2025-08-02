@@ -1,6 +1,6 @@
-import { FC } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import classNames from 'classnames';
+import { FC } from 'react';
 
 import { accordionListActionStyle } from './styles/accordion-list-action.css';
 import { AccordionListActionProps } from './types';

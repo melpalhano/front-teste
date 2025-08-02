@@ -1,8 +1,8 @@
+import { usePortal as usePortalContext } from './contexts/portal-context';
 import { PortalClose } from './portal-close';
-import { PortalViewport } from './portal-viewport';
 import { PortalProvider } from './portal-provider';
 import { PortalTrigger } from './portal-trigger';
-import { usePortal as usePortalContext } from './contexts/portal-context';
+import { PortalViewport } from './portal-viewport';
 
 export const Portal = {
   Provider: PortalProvider,

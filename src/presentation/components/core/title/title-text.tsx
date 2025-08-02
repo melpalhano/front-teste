@@ -1,6 +1,6 @@
-import { FC } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import classNames from 'classnames';
+import { FC } from 'react';
 
 import { titleTextStyle } from './styles/title-text.css';
 import { TitleTextProps } from './types';

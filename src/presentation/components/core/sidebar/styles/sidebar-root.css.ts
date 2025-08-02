@@ -1,6 +1,5 @@
-import { style } from '@vanilla-extract/css';
-
 import { theme } from '@components/styles/theme/theme.css';
+import { style } from '@vanilla-extract/css';
 
 export const sidebarRootStyle = style({
   height: '100%',

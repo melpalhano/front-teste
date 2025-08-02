@@ -1,6 +1,3 @@
-import { ButtonHTMLAttributes, HTMLAttributes } from 'react';
-import { RecipeVariants } from '@vanilla-extract/recipes';
-
 import {
   AccordionContentProps,
   AccordionHeaderProps,
@@ -8,8 +5,11 @@ import {
   AccordionSingleProps,
   AccordionTriggerProps,
 } from '@radix-ui/react-accordion';
-import { accordionListItemRecipe } from './styles/accordion-list-item-recipe.css';
+import { RecipeVariants } from '@vanilla-extract/recipes';
+import { ButtonHTMLAttributes, HTMLAttributes } from 'react';
+
 import * as constants from './constants';
+import { accordionListItemRecipe } from './styles/accordion-list-item-recipe.css';
 
 export type AccordionListAspect =
   (typeof constants.ACCORDION_LIST_ASPECT)[number];

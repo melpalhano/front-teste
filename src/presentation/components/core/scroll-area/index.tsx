@@ -1,14 +1,14 @@
 'use client';
 
-import { FC } from 'react';
 import {
+  Corner as PrimitiveCorner,
   Root as PrimitiveRoot,
-  Viewport as PrimitiveViewport,
   Scrollbar as PrimitiveScrollbar,
   Thumb as PrimitiveThumb,
-  Corner as PrimitiveCorner,
+  Viewport as PrimitiveViewport,
 } from '@radix-ui/react-scroll-area';
 import classNames from 'classnames';
+import { FC } from 'react';
 
 import * as styles from './styles/scroll-area.css';
 import { scrollAreaScrollbarRecipe } from './styles/scroll-area-scrollbar-recipe.css';
@@ -26,7 +26,7 @@ export const ScrollArea: FC<ScrollAreaRootProps> = (props) => {
         {children}
       </PrimitiveViewport>
 
-      <PrimitiveScrollbar className={scrollbarClasses} orientation="vertical">
+      <PrimitiveScrollbar className={scrollbarClasses} orientation='vertical'>
         <PrimitiveThumb className={scrollAreaScrollbarThumbStyle} />
       </PrimitiveScrollbar>
 

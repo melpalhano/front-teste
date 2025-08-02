@@ -1,6 +1,6 @@
-import { FC } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import classNames from 'classnames';
+import { FC } from 'react';
 
 import { containerRecipe } from './styles/container-recipe.css';
 import { ContainerProps } from './types';

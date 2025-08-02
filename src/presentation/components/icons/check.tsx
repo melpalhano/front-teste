@@ -1,8 +1,8 @@
-import { FC } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FC } from 'react';
 
-import { CustomSizesProps, IconProps } from "./types";
+import { CustomSizesProps, IconProps } from './types';
 
 export const CheckIcon: FC<IconProps> = (props) => {
   const { customSize, ...rest } = props;

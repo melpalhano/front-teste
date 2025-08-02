@@ -1,6 +1,6 @@
-import { FC } from 'react';
 import { Content as PrimitiveContent } from '@radix-ui/react-accordion';
 import classNames from 'classnames';
+import { FC } from 'react';
 
 import { accordionListContentStyle } from './styles/accordion-list-content.css';
 import { AccordionListContentProps } from './types';

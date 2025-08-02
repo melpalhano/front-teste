@@ -1,5 +1,5 @@
-import { FC } from 'react';
 import classNames from 'classnames';
+import { FC } from 'react';
 
 import { accordionListGroupStyle } from './styles/accordion-list-group.css';
 import { AccordionListActionGroupProps } from './types';
