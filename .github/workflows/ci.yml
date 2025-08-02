@@ -1,0 +1,44 @@
+name: 'ci'
+
+on:
+  push:
+    branches: ['main', 'staging', 'dev', 'feat/*']
+
+env:
+  NODE_VERSION: 22.15.0
+
+jobs:
+  lint:
+    name: 'lint:'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: 'checkout'
+        uses: actions/checkout@v3
+
+      - name: 'setup Node.js'
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: 'install dependencies'
+        run: npm install
+
+      - name: 'lint application'
+        run: npm run lint
+
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v3
+
+      - name: 'Setup Node.js'
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: 'install dependencies'
+        run: npm install
+
+      - name: 'build application'
+        run: npm run build
