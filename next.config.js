@@ -9,11 +9,6 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   output: 'standalone',
-  experimental: {
-    appDir: true,
-  },
-  fastRefresh: true,
-  concurrentFeatures: true,
   swcMinify: true,
 };
 
