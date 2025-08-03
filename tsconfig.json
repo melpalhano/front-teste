@@ -25,6 +25,7 @@
       "@domain/*": ["./src/domain/*"],
       "@infra/*": ["./src/infra/*"],
       "@main/*": ["./src/main/*"],
+      "@lib/*": ["./src/lib/*"],
 
       "@components/*": ["./src/presentation/components/*"],
       "@config/*": ["./src/presentation/config/*"],
