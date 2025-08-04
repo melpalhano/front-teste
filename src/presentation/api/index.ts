@@ -1,1 +1,3 @@
-export * from './central/centrals';
+export * from './central/getCentrals';
+export * from './model/getModels';
+
