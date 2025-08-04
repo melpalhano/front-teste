@@ -11,12 +11,14 @@ import { Button } from '../../components/core/button';
 import { Input } from '../../components/core/input';
 import { Select } from '../../components/core/select';
 import { QUERY_KEYS } from '../../constants/query-keys';
+import { useCentralCounterSync } from '../../hooks/use-central-counter-sync';
 import { useCheckMacExists } from '../../hooks/use-check-mac-exists';
 import { useModels } from '../../hooks/use-models';
 import {
   CreateCentralFormData,
   createCentralSchema,
 } from '../../schemas/novaCentral.schema';
+import { useCentralStore } from '../../state/central-store';
 import * as styles from './styles/create-central-form.css';
 
 export const CreateCentralForm = () => {
@@ -26,6 +28,8 @@ export const CreateCentralForm = () => {
   const [macValue, setMacValue] = useState('');
   const { data: macExists, isLoading: isCheckingMac } =
     useCheckMacExists(macValue);
+  const { incrementTotal } = useCentralStore();
+  const { syncCounter } = useCentralCounterSync();
 
   const { mutateAsync: createCentralFn, isPending: isCreating } = useMutation({
     mutationFn: createCentral,
@@ -65,7 +69,6 @@ export const CreateCentralForm = () => {
   }, [macExists, macValue, setError, clearErrors]);
 
   const onSubmit = async (data: CreateCentralFormData) => {
-    // Verificar se o MAC já existe antes de submeter
     if (macExists) {
       setError('mac', {
         type: 'manual',
@@ -80,6 +83,9 @@ export const CreateCentralForm = () => {
         mac: data.mac,
         modelId: Number(data.modelId),
       });
+
+      incrementTotal();
+      await syncCounter();
 
       await queryClient.invalidateQueries({
         queryKey: [QUERY_KEYS.CENTRALS],

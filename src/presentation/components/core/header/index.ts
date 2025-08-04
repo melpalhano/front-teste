@@ -1,3 +1,4 @@
+import { HeaderCounter } from './header-counter';
 import { HeaderItem } from './header-item';
 import { HeaderItemGroup } from './header-item-group';
 import { HeaderLeftGroup } from './header-left-group';
@@ -10,4 +11,5 @@ export const Header = {
   Item: HeaderItem,
   LeftGroup: HeaderLeftGroup,
   RightGroup: HeaderRightGroup,
+  Counter: HeaderCounter,
 };

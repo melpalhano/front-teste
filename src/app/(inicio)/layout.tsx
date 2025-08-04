@@ -25,6 +25,9 @@ export default function HomeLayout({ children }: { children: ReactNode }) {
               <Title.Text>{pageTitle}</Title.Text>
             </Title.Root>
           </Header.LeftGroup>
+          <Header.RightGroup className={styles.headerGroupStyles}>
+            <Header.Counter />
+          </Header.RightGroup>
         </Header.Root>
         {children}
       </div>

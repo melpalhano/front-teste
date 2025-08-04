@@ -15,6 +15,8 @@ import * as modalStyles from '../../../components/core/modal/styles/modal.css';
 import { LoaderIcon } from '../../../components/icons/loader';
 import { TrashIcon } from '../../../components/icons/trash';
 import { QUERY_KEYS } from '../../../constants/query-keys';
+import { useCentralCounterSync } from '../../../hooks/use-central-counter-sync';
+import { useCentralStore } from '../../../state/central-store';
 import { CentralWithModel } from '../../../types/central/central';
 import * as styles from './styles/delete-central-modal.css';
 
@@ -68,6 +70,8 @@ export function DeleteCentralModalProvider({
 function DeleteCentralModalContent() {
   const { isOpen, central, closeModal } = useDeleteCentralModal();
   const queryClient = useQueryClient();
+  const { decrementTotal } = useCentralStore();
+  const { syncCounter } = useCentralCounterSync();
 
   const { mutateAsync: deleteCentralFn, isPending: isDeleting } = useMutation({
     mutationFn: () => deleteCentral({ centralId: central!.id.toString() }),
@@ -76,6 +80,10 @@ function DeleteCentralModalContent() {
   const handleDelete = async () => {
     try {
       await deleteCentralFn();
+
+      decrementTotal();
+      await syncCounter();
+
       await queryClient.invalidateQueries({
         queryKey: [QUERY_KEYS.CENTRALS],
       });
