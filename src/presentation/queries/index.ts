@@ -1,1 +1,3 @@
-export { useCentrals } from './useCentrals';
+export * from './useCentral';
+export * from './useCentrals';
+

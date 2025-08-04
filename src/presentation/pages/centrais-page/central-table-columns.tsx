@@ -3,6 +3,7 @@
 import { ColumnDef } from '@tanstack/react-table';
 
 import { CentralWithModel } from '../../types/central/central';
+import { EditCentralButton } from './edit-central-button';
 import { DeleteCentralButton } from './modal/delete-central-modal';
 
 export const centralsColumns: ColumnDef<CentralWithModel>[] = [
@@ -31,7 +32,8 @@ export const centralsColumns: ColumnDef<CentralWithModel>[] = [
     id: 'actions',
     header: 'Ações',
     cell: ({ row }) => (
-      <div style={{ textAlign: 'center' }}>
+      <div style={{ display: 'flex', gap: '8px', justifyContent: 'center' }}>
+        <EditCentralButton centralId={row.original.id} />
         <DeleteCentralButton central={row.original} />
       </div>
     ),
