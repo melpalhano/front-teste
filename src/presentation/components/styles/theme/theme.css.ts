@@ -49,6 +49,17 @@ export const theme = createGlobalTheme(':root', {
     tableColorPrimary: COLOR_PALETTE.neutral[850],
     tableRowOdd: COLOR_PALETTE.neutral[860],
     tableRowEven: COLOR_PALETTE.neutral[700],
+
+    shadowLight: COLOR_PALETTE.alpha.neutral[800],
+    shadowFocus: COLOR_PALETTE.alpha.green[500],
+
+    buttonPrimary: COLOR_PALETTE.green[500],
+    buttonPrimaryHover: COLOR_PALETTE.green[400],
+    buttonPrimaryText: COLOR_PALETTE.neutral[50],
+
+    stateError: COLOR_PALETTE.red[400],
+    stateWarning: COLOR_PALETTE.yellow[500],
+    stateInfo: COLOR_PALETTE.neutral[200],
   },
   fonts: {
     primary: 'var(--nunito-font), sans-serif',

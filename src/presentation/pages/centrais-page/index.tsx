@@ -1,3 +1,7 @@
+import { CentralTable } from './central-table';
+
 export const CentraisPage = () => {
-  return <></>;
+  return <CentralTable />;
 };
+
+export default CentraisPage;

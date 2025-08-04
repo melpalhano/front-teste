@@ -1,4 +1,4 @@
-import { CentraisPage } from '@pages/centrais-page';
+import CentraisPage from '@pages/centrais-page';
 
 export default function Centrais() {
   return <CentraisPage />;

@@ -1,4 +1,4 @@
-import { MENU_RESOURCES_CONFIGS } from '@config/menu';
+import { MENU_RESOURCES_CONFIGS } from '../../config/menu';
 
 export const getPageTitleFromPath = (pathname: string): string => {
   const menuItem = MENU_RESOURCES_CONFIGS.find((item) => {

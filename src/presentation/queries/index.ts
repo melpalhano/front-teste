@@ -1,0 +1,1 @@
+export { useCentrals } from './useCentrals';

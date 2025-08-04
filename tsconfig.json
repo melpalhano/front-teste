@@ -14,6 +14,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": ".",
     "plugins": [
       {
         "name": "next"
@@ -25,7 +26,7 @@
       "@domain/*": ["./src/domain/*"],
       "@infra/*": ["./src/infra/*"],
       "@main/*": ["./src/main/*"],
-      "@lib/*": ["./src/lib/*"],
+      "@lib/*": ["src/presentation/lib/*"],
 
       "@components/*": ["./src/presentation/components/*"],
       "@config/*": ["./src/presentation/config/*"],

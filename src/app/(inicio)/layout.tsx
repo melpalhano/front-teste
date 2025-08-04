@@ -3,8 +3,7 @@
 import { Header } from '@components/core/header';
 import { Sidebar } from '@components/core/sidebar';
 import { Title } from '@components/core/title';
-import { MENU_RESOURCES_CONFIGS } from '@config/menu';
-import { getPageTitleFromPath } from '@lib/router/getPageTitleFromPath';
+import { getPageTitleFromPath, MENU_RESOURCES_CONFIGS } from '@lib/router';
 import { usePathname } from 'next/navigation';
 import { ReactNode } from 'react';
 
