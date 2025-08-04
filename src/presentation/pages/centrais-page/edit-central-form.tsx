@@ -36,7 +36,8 @@ export const EditCentralForm = ({ centralId }: EditCentralFormProps) => {
   const { syncCounter } = useCentralCounterSync();
 
   const { mutateAsync: updateCentralFn, isPending: isUpdating } = useMutation({
-    mutationFn: ({ id, data }: { id: number; data: any }) => updateCentral(id, data),
+    mutationFn: ({ id, data }: { id: number; data: any }) =>
+      updateCentral(id, data),
   });
 
   const {
@@ -56,7 +57,6 @@ export const EditCentralForm = ({ centralId }: EditCentralFormProps) => {
     },
   });
 
-  // Preenche o formulário com os dados da central quando carregados
   useEffect(() => {
     if (central) {
       setValue('name', central.name);
@@ -178,7 +178,12 @@ export const EditCentralForm = ({ centralId }: EditCentralFormProps) => {
         <Button
           type='submit'
           variant='primary'
-          disabled={isUpdating || isLoadingModels || isCheckingMac || (macExists && macValue !== central?.mac)}
+          disabled={
+            isUpdating ||
+            isLoadingModels ||
+            isCheckingMac ||
+            (macExists && macValue !== central?.mac)
+          }
         >
           {isUpdating ? 'Atualizando...' : 'Atualizar Central'}
         </Button>

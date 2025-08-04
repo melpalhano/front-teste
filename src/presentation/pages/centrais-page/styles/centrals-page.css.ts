@@ -26,6 +26,11 @@ export const centralsPageContentStyle = style({
   width: '100%',
   padding: '24px',
   backgroundColor: theme.colors.primarySurface,
-  boxShadow: `0 2px 8px ${theme.colors.shadowLight}`,
   borderRadius: '8px',
+});
+
+export const centralsPageActionsStyle = style({
+  display: 'flex',
+  gap: '8px',
+  alignItems: 'center',
 });

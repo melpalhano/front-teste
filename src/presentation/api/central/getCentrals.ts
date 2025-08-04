@@ -6,12 +6,12 @@ interface GetCentralsParams {
 }
 
 export const getCentrals = async (
-  params?: GetCentralsParams
+  params?: GetCentralsParams,
 ): Promise<Central[]> => {
   const response = await jsonServerApi.get('/centrals', {
     params: params?.search ? { q: params.search } : undefined,
   });
-  let centrals = response.data;
+  const centrals = response.data;
 
   return centrals;
 };

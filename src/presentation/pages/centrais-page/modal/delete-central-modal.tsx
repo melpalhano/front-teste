@@ -16,6 +16,7 @@ import { LoaderIcon } from '../../../components/icons/loader';
 import { TrashIcon } from '../../../components/icons/trash';
 import { QUERY_KEYS } from '../../../constants/query-keys';
 import { useCentralCounterSync } from '../../../hooks/use-central-counter-sync';
+import { useUndoDelete } from '../../../hooks/use-undo-delete';
 import { useCentralStore } from '../../../state/central-store';
 import { CentralWithModel } from '../../../types/central/central';
 import * as styles from './styles/delete-central-modal.css';
@@ -72,12 +73,15 @@ function DeleteCentralModalContent() {
   const queryClient = useQueryClient();
   const { decrementTotal } = useCentralStore();
   const { syncCounter } = useCentralCounterSync();
+  const { handleDeleteWithUndo } = useUndoDelete();
 
   const { mutateAsync: deleteCentralFn, isPending: isDeleting } = useMutation({
     mutationFn: () => deleteCentral({ centralId: central!.id }),
   });
 
   const handleDelete = async () => {
+    if (!central) return;
+
     try {
       await deleteCentralFn();
 
@@ -87,7 +91,10 @@ function DeleteCentralModalContent() {
       await queryClient.invalidateQueries({
         queryKey: [QUERY_KEYS.CENTRALS],
       });
+
       closeModal();
+
+      await handleDeleteWithUndo(central);
     } catch (error) {
       console.error('Erro ao deletar central:', error);
     }
