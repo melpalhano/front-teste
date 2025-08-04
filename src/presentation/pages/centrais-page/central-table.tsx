@@ -6,7 +6,12 @@ import DataTable from '../../components/core/table/data-table';
 import { useCentrals } from '../../queries';
 import { centralsColumns } from './central-table-columns';
 import { CreateCentralButton } from './create-central-button';
-import * as styles from './styles/centrals-page.css';
+import { DeleteCentralModal } from './modal';
+import {
+  centralsPageContainerStyle,
+  centralsPageContentStyle,
+  centralsPageHeaderStyle,
+} from './styles/centrals-page.css';
 
 export const CentralTable: FC = () => {
   const [searchTerm] = useState('');
@@ -20,7 +25,9 @@ export const CentralTable: FC = () => {
 
   const { data, isLoading, error } = useCentrals(queryParams);
 
-  const handleCreateCentral = useCallback(() => {}, []);
+  const handleCreateCentral = useCallback(() => {
+    window.location.href = '/centrais/nova-central';
+  }, []);
 
   const tableData = useMemo(() => {
     return data?.data || [];
@@ -35,22 +42,24 @@ export const CentralTable: FC = () => {
   }
 
   return (
-    <div className={styles.centralsPageContainerStyle}>
-      <div className={styles.centralsPageHeaderStyle}>
-        <CreateCentralButton onClick={handleCreateCentral} />
-      </div>
-      <div className={styles.centralsPageContentStyle}>
-        <DataTable.Root columns={centralsColumns} data={tableData}>
-          <DataTable.Controls>
-            <DataTable.Search />
-            <DataTable.PageSize />
-          </DataTable.Controls>
+    <DeleteCentralModal>
+      <div className={centralsPageContainerStyle}>
+        <div className={centralsPageHeaderStyle}>
+          <CreateCentralButton onClick={handleCreateCentral} />
+        </div>
+        <div className={centralsPageContentStyle}>
+          <DataTable.Root columns={centralsColumns} data={tableData}>
+            <DataTable.Controls>
+              <DataTable.Search />
+              <DataTable.PageSize />
+            </DataTable.Controls>
 
-          <DataTable.Content />
+            <DataTable.Content />
 
-          {tableData.length > 0 && <DataTable.Pagination />}
-        </DataTable.Root>
+            {tableData.length > 0 && <DataTable.Pagination />}
+          </DataTable.Root>
+        </div>
       </div>
-    </div>
+    </DeleteCentralModal>
   );
 };

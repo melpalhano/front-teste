@@ -2,9 +2,8 @@
 
 import { ColumnDef } from '@tanstack/react-table';
 
-import { Button } from '../../components/core/button';
-import { TrashIcon } from '../../components/icons/trash';
 import { CentralWithModel } from '../../types/central/central';
+import { DeleteCentralButton } from './modal/delete-central-modal';
 
 export const centralsColumns: ColumnDef<CentralWithModel>[] = [
   {
@@ -31,17 +30,9 @@ export const centralsColumns: ColumnDef<CentralWithModel>[] = [
   {
     id: 'actions',
     header: 'Ações',
-    cell: ({ row: _row }) => (
+    cell: ({ row }) => (
       <div style={{ textAlign: 'center' }}>
-        <Button
-          onClick={() => {}}
-          variant='danger'
-          size='small'
-          icon={<TrashIcon customSize='12px' />}
-          iconPosition='left'
-        >
-          Deletar
-        </Button>
+        <DeleteCentralButton central={row.original} />
       </div>
     ),
     enableSorting: false,
