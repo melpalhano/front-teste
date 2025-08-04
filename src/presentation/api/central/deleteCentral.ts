@@ -1,9 +1,9 @@
 import { jsonServerApi } from '../../lib/axios';
 
 export interface DeleteCentralParams {
-  centralId: string;
+  centralId: number;
 }
 
 export async function deleteCentral({ centralId }: DeleteCentralParams) {
-  await jsonServerApi.delete(`/centrals/${centralId}`);
+  await jsonServerApi.delete(`/centrals/${String(centralId)}`);
 }

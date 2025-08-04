@@ -74,7 +74,7 @@ function DeleteCentralModalContent() {
   const { syncCounter } = useCentralCounterSync();
 
   const { mutateAsync: deleteCentralFn, isPending: isDeleting } = useMutation({
-    mutationFn: () => deleteCentral({ centralId: central!.id.toString() }),
+    mutationFn: () => deleteCentral({ centralId: central!.id }),
   });
 
   const handleDelete = async () => {
